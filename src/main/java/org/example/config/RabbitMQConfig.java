@@ -12,37 +12,37 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class RabbitMQConfig {
 
-    @Value("${app.rabbitmq.exchange}")
+    @Value("${rabbitmq.exchange.name}")
     private String exchange;
 
-    @Value("${app.rabbitmq.exchange.dlx}")
+    @Value("${rabbitmq.exchange.dlx}")
     private String dlxExchange;
 
-    @Value("${app.rabbitmq.queue.inventory}")
+    @Value("${rabbitmq.queue.inventory}")
     private String inventoryQueue;
 
-    @Value("${app.rabbitmq.queue.payment}")
+    @Value("${rabbitmq.queue.payment}")
     private String paymentQueue;
 
-    @Value("${app.rabbitmq.queue.notification}")
+    @Value("${rabbitmq.queue.notification}")
     private String notificationQueue;
 
-    @Value("${app.rabbitmq.queue.dlq}")
+    @Value("${rabbitmq.queue.dlq}")
     private String dlq;
 
-    @Value("${app.rabbitmq.routing-key.inventory}")
+    @Value("${rabbitmq.routing-key.inventory}")
     private String inventoryRoutingKey;
 
-    @Value("${app.rabbitmq.routing-key.payment}")
+    @Value("${rabbitmq.routing-key.payment}")
     private String paymentRoutingKey;
 
-    @Value("${app.rabbitmq.routing-key.notification}")
+    @Value("${rabbitmq.routing-key.notification}")
     private String notificationRoutingKey;
 
-    @Value("${app.rabbitmq.routing-key.inventory-rollback}")
+    @Value("${rabbitmq.routing-key.inventory-rollback}")
     private String inventoryRollbackKey;
 
-    @Value("${app.rabbitmq.routing-key.order-failed}")
+    @Value("${rabbitmq.routing-key.order-failed}")
     private String orderFailedKey;
 
     @Bean
